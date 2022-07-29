@@ -1,6 +1,7 @@
 package com.shchepinms.intellij_git_test;
 
 import java.lang.reflect.Method;
+import java.util.Locale;
 
 public class UsefulInterfaceImpl implements UsefulInterface {
 
@@ -20,9 +21,15 @@ public class UsefulInterfaceImpl implements UsefulInterface {
         Method[] methods = clazz.getMethods();
         for (Method method :
                 methods) {
-            if (method.getName().contains("Useful"))
+            if (method.getName().toLowerCase().contains("useful"))
                 return true;
         }
         return false;
+    }
+
+    @Override
+    public void checkAwesome(Method method) {
+        if (method.getName().toLowerCase().contains("awesome"))
+            System.out.printf("%n*********Method checked**********%n\"%s\" is Awesome!%n%n", method.getName());
     }
 }

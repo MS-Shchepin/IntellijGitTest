@@ -1,5 +1,7 @@
 package com.shchepinms.intellij_git_test;
 
+import java.util.Arrays;
+
 public class UsefulClass {
     public static void main(String[] args) {
         System.out.println("Very useful class :D");
@@ -12,5 +14,7 @@ public class UsefulClass {
             System.out.println("Its truly useful! Awesome!");
         if (usefulChecker.isUsefulClass(OneMoreUsefulClass.class))
             System.out.println("Its truly useful class! God bless you!");
+        Arrays.stream(OneMoreUsefulClass.class.getMethods())
+                .forEach(usefulChecker::checkAwesome);
     }
 }
