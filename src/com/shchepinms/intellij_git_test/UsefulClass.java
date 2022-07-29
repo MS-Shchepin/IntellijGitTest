@@ -7,5 +7,10 @@ public class UsefulClass {
         System.out.println("Excellent.");
         System.out.println("1");
         System.out.println("2");
+        UsefulInterface usefulChecker = new UsefulInterfaceImpl();
+        if (usefulChecker.isUseful())
+            System.out.println("Its truly useful! Awesome!");
+        if (usefulChecker.isUsefulClass(OneMoreUsefulClass.class))
+            System.out.println("Its truly useful class! God bless you!");
     }
 }
