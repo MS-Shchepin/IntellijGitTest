@@ -16,5 +16,6 @@ public class UsefulClass {
             System.out.println("Its truly useful class! God bless you!");
         Arrays.stream(OneMoreUsefulClass.class.getMethods())
                 .forEach(usefulChecker::checkAwesome);
+        System.out.println("Enough today.");
     }
 }
